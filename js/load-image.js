@@ -19,6 +19,7 @@
   // element (if supported by the browser) as parameter:
   function loadImage (file, callback, options) {
     var img = document.createElement('img')
+    img.setAttribute('crossorigin', 'anonymous')
     var url
     img.onerror = function (event) {
       return loadImage.onerror(img, event, file, callback, options)
